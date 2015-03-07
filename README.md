@@ -1,6 +1,9 @@
 # kickinrad-mememachine
 Flag uploading script
 
+requires PIL and requests
+
+
 add username and password to the top to login to your account
 
 put raw png and jpg images in the "input" folder
@@ -10,3 +13,4 @@ folder, and uploaded as a flag
 
 raw images are then moved to the "unconverted" folder, so the input folder remains 
 empty for the next use
+
