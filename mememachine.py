@@ -31,8 +31,7 @@ for i in os.listdir("./input"):
 	img_in = Image.open(("./input/" + i))
 	img_in.save('./unconverted/%s' % i)
 	print "Backed up " + i + " to unconverted"
-	img_out = img_in.resize((498, 190), Image.ANTIALIAS)		# best 
-down-sizing filter
+	img_out = img_in.resize((498, 190), Image.ANTIALIAS)		# best down-sizing filter
 	img_out = ImageOps.expand(img_out,border=1,fill='black')
 	img_out.save('./output/flag-%s' % i)
 	print "Saved flag-" + i
@@ -42,8 +41,7 @@ down-sizing filter
 	if upload:
 		print "Attempting to upload flag..."
 		try:
-			file_upload = [('file', (('./output/flag-' + 
-i),open(('./output/flag-' + i), "rb"), ('image/' + str(img_out.format))))]
+			file_upload = [('file', (('./output/flag-' + i),open(('./output/flag-' + i), "rb"), ('image/' + str(img_out.format))))]
 			r = s.post("http://www.kickinrad.tv/flagupload.php",
 				data={
 					"MAX_FILE_SIZE": "512000",
